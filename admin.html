@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+          type="text/css"
+          href="services.html">
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+  background-image: url("https://foodandwine.ie/uploads/article/2019/5/2362/article_getty_ice_cream_main.jpg?t=1561565844");
+   width: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #FBFFFF;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+  .dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+
+
+
+}
+</style>
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="tab.php">ORDERS</a>
+    <a href="show.php">STOCK</a>
+    <a href="table.php">PRODUCTS</a>
+    <a href="bill.php">BILLING</a>
+  </div>
+</div>
+<a href="index.php"><img src="https://cdn-icons-png.flaticon.com/128/1716/1716282.png" alt="HTML tutorial" style="width:50px;height:50px;"></a>
+<h2><marquee width="100%" behavior="alternate" >  
+WELCOME ADMIN!  
+</marquee>  </h2>
+
+<center><span style="font-size:30px;cursor:pointer;color:#0000B2;"  onclick="openNav()">&#9776; KRISHNA ICE-CREAM </span></center>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
+
+</body>
+</html>
